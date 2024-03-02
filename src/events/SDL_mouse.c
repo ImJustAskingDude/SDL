@@ -972,6 +972,13 @@ Uint32 SDL_GetMouseState(float *x, float *y)
     return GetButtonState(mouse, SDL_TRUE);
 }
 
+void SDL_GetMousePosition(float* x, float* y) {
+    SDL_Mouse *mouse = SDL_GetMouse();
+
+    *x = mouse->x;
+    *y = mouse->y;
+}
+
 Uint32 SDL_GetRelativeMouseState(float *x, float *y)
 {
     SDL_Mouse *mouse = SDL_GetMouse();
